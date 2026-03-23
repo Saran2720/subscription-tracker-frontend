@@ -24,7 +24,11 @@ const SignIn = () => {
             login(res.data.data.user, res.data.data.token);
             navigate('/dashboard');
         } catch (err) {
-            setError(err.response?.data?.message || 'Something went wrong');
+            if(err.response?.statusCode === 401) {
+                setError('Invalid email or password');
+            } else {
+                setError(err.response?.data?.message || 'Something went wrong');
+            }
         } finally {
             setLoading(false);
         }

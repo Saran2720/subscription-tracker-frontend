@@ -1,6 +1,6 @@
 import  { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getUserSubscriptions } from "../services/api";
 
 const statusColor = {
@@ -22,7 +22,8 @@ const Dashboard = () => {
         const res = await getUserSubscriptions(user._id);
         setSubscriptions(res.data.data);
       } catch (err) {
-        setError("Failed to load subscriptions", err);
+        setError("Failed to load subscriptions");
+        console.log(err.response || err);
       } finally {
         setLoading(false);
       }

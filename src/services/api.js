@@ -19,7 +19,7 @@ export const signIn = (data)=> API.post("/auth/sign-in", data);
 //subscription apis
 export const createSubscription = (data) => API.post("/subscriptions", data);
 export const getUserSubscriptions = (userId) => API.get(`/subscriptions/user/${userId}`);
-export const getSubscriptions = (id) => API.get(`/subscriptions/${id}`);
+export const getSubscription = (id) => API.get(`/subscriptions/${id}`);
 export const updateSubscription = (id, data) => API.put(`/subscriptions/${id}`, data);
 export const cancelSubscription = (id) => API.put(`/subscriptions/cancel/${id}`);
 export const deleteSubscription = (id) => API.delete(`/subscriptions/${id}`);

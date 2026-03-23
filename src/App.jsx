@@ -30,7 +30,7 @@ function App() {
         }
       />
       <Route
-        path="/subscriptions"
+        path="/subscriptions/create"
         element={
           <ProtectedRoute>
             <CreateSubscription />
