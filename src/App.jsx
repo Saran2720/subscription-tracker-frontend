@@ -5,7 +5,8 @@ import LandingPage from "./pages/LandingPage";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import SubscriptionDetail from "./pages/SubscriptionDetail";
-import { useAuth } from "./context/AuthContext";
+import useAuth from "./hooks/useAuth";
+
 
 const ProtectedRoute = ({ children }) => {
     const { user, loading } = useAuth();

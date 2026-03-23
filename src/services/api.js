@@ -13,8 +13,8 @@ API.interceptors.request.use((config) => {
 });
 
 //auth apis
-export const signup = (data)=> API.post("/auth/signup", data);
-export const signIn = (data)=> API.post("/auth/signin", data);
+export const signUp = (data)=> API.post("/auth/sign-up", data);
+export const signIn = (data)=> API.post("/auth/sign-in", data);
 
 //subscription apis
 export const createSubscription = (data) => API.post("/subscriptions", data);
