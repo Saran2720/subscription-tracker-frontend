@@ -23,7 +23,7 @@ const Dashboard = () => {
         setSubscriptions(res.data.data);
       } catch (err) {
         setError("Failed to load subscriptions");
-        console.log(err.response || err);
+        console.error(err.response || err);
       } finally {
         setLoading(false);
       }
